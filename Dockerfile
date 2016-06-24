@@ -1,7 +1,7 @@
 FROM mhart/alpine-node:5
 
-ADD . /demo-supertest
+ADD . /demo-testing-compose
 
-WORKDIR /demo-supertest/
+WORKDIR /demo-testing-compose/
 
 RUN npm install
