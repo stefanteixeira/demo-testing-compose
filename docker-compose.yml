@@ -1,0 +1,18 @@
+version: '2'
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    command: node server.js
+
+  mongo:
+    image: mongo:2.6
+    ports:
+      - "27017:27017"
+
+  tests:
+    build:
+      context: .
+    command: /bin/sh -c "sleep 10 && npm test"
